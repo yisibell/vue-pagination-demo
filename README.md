@@ -35,9 +35,10 @@ export default {
 
 ## Properties
 
-|属性|类型|默认值|是否必需|
-|showItem|Number|5|否|
-|totalPages|Number|无|是|
+| **属性** | **类型** | **默认值** | **是否必需** |
+| :----- | :-----: | :-----: | ----- |
+|showItem|Number|5| 否 |
+|totalPages|Number| 无 | 是 |
 |first|String|首页|否|
 |prev|String|上一页|否|
 |next|String|下一页|否|
