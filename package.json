@@ -1,6 +1,6 @@
 {
   "name": "vue-paginators",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A pagination component for vue.js",
   "main": "src/pagination/index.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "pagination",
     "vue"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "elenh",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -22,15 +22,10 @@
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "html-webpack-template": "^6.1.0",
-    "less": "^2.7.3",
-    "less-loader": "^4.0.5",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "vue": "^2.5.13",
     "vue-loader": "^13.6.0",
-    "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
