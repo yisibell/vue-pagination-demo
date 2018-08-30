@@ -1,4 +1,4 @@
-# vue-pagination
+# vuePagination
 > a pagination component for vue.js
 
 ## Useage
@@ -8,10 +8,17 @@
 npm install vue-pagination --save 
 
 ```
+``` js
+// main.js
+import vuePagination from "vuePagination"
+Vue.use(vuePagination)
+
+```
+
 
 ``` html
 
-<pagination :totalPages="14" @jump="jumpTo"/>
+<pagination :totalPages="14" @jump="jumpTo"> </pagination>
 
 ```
 
