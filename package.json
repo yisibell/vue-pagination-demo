@@ -1,6 +1,6 @@
 {
-  "name": "vue-pagination",
-  "version": "1.0.0",
+  "name": "vue-paginators",
+  "version": "1.0.1",
   "description": "A pagination component for vue.js",
   "main": "src/pagination/index.js",
   "scripts": {
@@ -8,7 +8,10 @@
     "dev": "webpack-dev-server --config webpack.config.js",
     "start": "npm run dev"
   },
-  "keywords": [],
+  "keywords": [
+    "pagination",
+    "vue"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
