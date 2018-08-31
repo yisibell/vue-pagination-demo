@@ -1,32 +1,31 @@
 # vue-paginators
 > a pagination component for vue.js
 
-## Useage
-
+## Usage
 ``` bash
-# npm
+# using npm
 npm install vue-paginators --save 
-
 ```
 ``` js
-// main.js
+// In main.js
 import vuePaginators from "vue-paginators"
 Vue.use(vuePaginators)
-
 ```
 
 ``` html
-<pagination :totalPages="14" @jump="jumpTo"></pagination>
+<pagination :totalPages="total" @jump="jumpTo"></pagination>
 ```
 
 ``` js
 export default {
   data(){
-    return {}
+    return {
+      total: 14  // get this from ajax data
+    }
   },
   methods: {
     jumpTo(curr){
-      // do somethig when jump to foo pages...
+      // do something when you click the pagination bar ...
     }
   }
 }
@@ -44,22 +43,24 @@ export default {
 |next|String|下一页|否|
 |last|String|末页|否|
 
-## event
+## Events
 **@jump**
 > 点击分页时触发句柄
 
 ``` html
-<pagination :totalPages="14" :showItem="5" @jump="jumpTo"></pagination>
+<pagination :totalPages="total" :showItem="5" @jump="jumpTo"></pagination>
 ```
 
 ``` js
 export default {
   data(){
-    return {}
+    return {
+      total: 14
+    }
   },
   methods : {
     jumpTo(curr){
-      // do something when click the pagination bar ...
+      // do something when you click the pagination bar ...
     }
   }
 }
