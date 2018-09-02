@@ -70,5 +70,5 @@ export default {
 
 ## Logs
 > 2018/9/2 
->> 新增 `pageStyle` 属性， 可选为 `boot` 即bootstrap风格分页条
->> 新增 `skin` 属性，可自行设置分页条的颜色。默认为 `#0E90D2`
+1. 新增 `pageStyle` 属性， 可选为 `boot` 即bootstrap风格分页条
+2. 新增 `skin` 属性，可自行设置分页条的颜色。默认为 `#0E90D2`
