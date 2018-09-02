@@ -1,17 +1,17 @@
 <template>
-   <ul class="pagination">
+ 
+  <ul :class="'pagination-' + pageStyle ">
 
-      <li v-show="current != 1" @click="goto(1)"><a href="javascript:;">{{first}}</a></li>
-      <li v-show="current != 1" @click="current-- && goto(current)"><a href="javascript:;">{{prev}}</a></li>
+    <li v-show="current != 1" @click="goto(1)"><a href="javascript:;" :style="silentStyle">{{first}}</a></li>
+    <li v-show="current != 1" @click="current-- && goto(current)"><a href="javascript:;" :style="silentStyle">{{prev}}</a></li>
+    <li v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+      <a href="javascript:;" :style="current == index ? activeStyle : silentStyle">{{index}}</a>
+    </li>
+    <li v-show="totalPages != current && totalPages != 0 " @click="current++ && goto(current)"><a href="javascript:;" :style="silentStyle">{{next}}</a></li>
+    <li v-show="totalPages != current && totalPages != 0 " @click="goto(totalPages)"><a href="javascript:;" :style="silentStyle">{{last}}</a></li>
+      
+  </ul>
 
-      <li v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
-        <a href="javascript:;" >{{index}}</a>
-      </li>
-
-      <li v-show="totalPages != current && totalPages != 0 " @click="current++ && goto(current)"><a href="javascript:;">{{next}}</a></li>
-      <li v-show="totalPages != current && totalPages != 0 " @click="goto(totalPages)"><a href="javascript:;">{{last}}</a></li>
-        
-    </ul>
 </template>
 
 <script>
@@ -20,6 +20,8 @@ export default {
     data:function(){
       return{
         current: 1,  //当前页码
+        silentStyle: {},  //非激活样式
+        activeStyle: {}  //激活样式
       }
     },
     props : {
@@ -46,7 +48,19 @@ export default {
       next: {
         type: String,
         default: "下一页"
+      },
+      pageStyle: {
+        type: String,
+        default: "default"
+      },
+      skin: {
+        type: String,
+        default: "#0E90D2"
       }    
+    },
+    created(){
+      this.silentStyle = { background: "#fff" , color: this.skin };
+      this.activeStyle = { background: this.skin , color: "#fff"};
     },
     computed:{
       //中间页码如何显示 计算属性
@@ -93,36 +107,75 @@ export default {
 </script>
 
 
-<style scoped>
-  body{
-    font-family:"Segoe UI";
-  }
-  li{
-    list-style:none;
-  }
-  a{
-    text-decoration:none;
-  }
-  .pagination {
-    position: relative;
+<style lang="scss" scoped>
 
+  ul{
+    overflow: hidden;
+    font-family:"Segoe UI";
+    li{
+      list-style:none;
+      float: left;
+      display: block;
+      a{
+        text-decoration:none;
+        display: block;
+        padding:.5rem 1rem;
+        border:1px solid #ddd;
+        &:hover{
+          background:#eee !important;
+        }
+      }
+    }
   }
-  .pagination li{
-    display: inline-block;
-    margin:0 5px;
+ 
+  //default's style pagination
+  .pagination-default{
+    li{
+      margin:0 5px;
+      // a{
+      //   background:#fff;
+      //   color:#0E90D2;
+      // }
+      // &.active{
+      //   a{
+      //     background:#0E90D2;
+      //     color:#fff;
+      //   }
+      // }
+    }
+   
   }
-  .pagination li a{
-    padding:.5rem 1rem;
-    display:inline-block;
-    border:1px solid #ddd;
-    background:#fff;
-    color:#0E90D2;
+ 
+
+  // bootstrap's style pagination
+  .pagination-boot{
+    li{
+      margin-left: -1px;
+      &:last-child{
+         a:last-child{
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+       &:first-child{
+         a:first-child{
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+      }
+      // a{
+      //   background:#fff;
+      //   color:#0E90D2;
+      // }
+      // &.active{
+      //   a{
+      //     background:#0E90D2;
+      //     color:#fff;
+      //   }
+      // }
+
+    }
   }
-  .pagination li a:hover{
-    background:#eee;
-  }
-  .pagination li.active a{
-    background:#0E90D2;
-    color:#fff;
-  }
+
+
 </style>

@@ -34,14 +34,16 @@ export default {
 
 ## Properties
 
-| **属性** | **类型** | **默认值** | **是否必需** |
+| **属性** | **类型** | **可选值** | **是否必需** |
 | :-----: | :-----: | :-----: | :-----: |
-|showItem|Number|5| 否 |
-|totalPages|Number| 无 | 是 |
-|first|String|首页|否|
-|prev|String|上一页|否|
-|next|String|下一页|否|
-|last|String|末页|否|
+|showItem|Number|5 (默认)| 否 |
+|totalPages|Number| 无 (默认) | 是 |
+|first|String|首页 (默认)|否|
+|prev|String|上一页 (默认)|否|
+|next|String|下一页 (默认)|否|
+|last|String|末页 (默认)|否|
+|pageStyle|String|default (默认) </br> boot (bootstrap风格)|否|
+|skin|String(任意css颜色值)|#0E90D2 (默认)|否|
 
 ## Events
 **@jump**
@@ -65,3 +67,8 @@ export default {
   }
 }
 ```
+
+## Logs
+> 2018/9/2 
+>> 新增 `pageStyle` 属性， 可选为 `boot` 即bootstrap风格分页条
+>> 新增 `skin` 属性，可自行设置分页条的颜色。默认为 `#0E90D2`

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pagination :totalPages="12"/>
+    <pagination :totalPages="12" pageStyle="boot"/>
   </div>
 </template>
 <script>
