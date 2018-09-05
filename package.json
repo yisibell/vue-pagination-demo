@@ -1,6 +1,6 @@
 {
   "name": "vue-paginators",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A pagination component for vue.js",
   "main": "src/pagination/index.js",
   "scripts": {
@@ -12,6 +12,13 @@
     "pagination",
     "vue"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yisibell/vue-paginators.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yisibell/vue-paginators/issues"
+  },
   "author": "elenh",
   "license": "MIT",
   "devDependencies": {
