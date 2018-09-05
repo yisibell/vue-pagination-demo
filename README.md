@@ -1,13 +1,18 @@
 # vue-paginators
 > a pagination component for vue.js
 
-## Usage
+## Installation
+**Using npm**
 ``` bash
-# using npm
 npm install vue-paginators --save 
+# or
+cnpm install vue-paginators --save
 ```
+
+## Usage
 ``` js
 // In main.js
+import Vue from 'vue'
 import vuePaginators from "vue-paginators"
 Vue.use(vuePaginators)
 ```
