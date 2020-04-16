@@ -1,5 +1,5 @@
 {
-  "name": "vue-paginators",
+  "name": "@aidol/vue-pagination",
   "version": "1.1.4",
   "description": "A pagination component for vue.js",
   "main": "src/pagination/index.js",
@@ -10,14 +10,15 @@
   },
   "keywords": [
     "pagination",
-    "vue"
+    "vue",
+    "aidol"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yisibell/vue-paginators.git"
+    "url": "https://github.com/yisibell/vue-pagination.git"
   },
   "bugs": {
-    "url": "https://github.com/yisibell/vue-paginators/issues"
+    "url": "https://github.com/yisibell/vue-pagination/issues"
   },
   "author": "elenh",
   "license": "MIT",

@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: "pagination",
+    name: "AiPagination",
     data:function(){
       return{
         current: 1,  //当前页码

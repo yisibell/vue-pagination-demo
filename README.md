@@ -1,24 +1,28 @@
-# vue-paginators
-> a pagination component for vue.js
+# @aidol/vue-pagination
+
+a pagination component for vue.js
 
 ## Installation
+
 **Using npm**
+
 ``` bash
-npm install vue-paginators --save 
+npm install @aidol/vue-pagination --save 
 # or
-cnpm install vue-paginators --save
+cnpm install @aidol/vue-pagination --save
 ```
 
 ## Usage
+
 ``` js
 // In main.js
 import Vue from 'vue'
-import vuePaginators from "vue-paginators"
-Vue.use(vuePaginators)
+import AiPagination from "@aidol/vue-pagination"
+Vue.use(AiPagination)
 ```
 
 ``` html
-<pagination :totalPages="total" @jump="jumpTo"></pagination>
+<ai-pagination :totalPages="total" @jump="jumpTo"></ai-pagination>
 ```
 
 ``` js
@@ -51,11 +55,13 @@ export default {
 |skin|String(任意css颜色值)|#0E90D2 (默认)|否|
 
 ## Events
+
 **@jump**
-> 点击分页时触发句柄
+
+点击分页时触发句柄
 
 ``` html
-<pagination :totalPages="total" :showItem="5" @jump="jumpTo"></pagination>
+<ai-pagination :totalPages="total" :showItem="5" @jump="jumpTo"></ai-pagination>
 ```
 
 ``` js
@@ -74,6 +80,8 @@ export default {
 ```
 
 ## Logs
+
 > 2018/9/2 
+
 1. 新增 `pageStyle` 属性， 可选为 `boot` 即bootstrap风格分页条
 2. 新增 `skin` 属性，可自行设置分页条的颜色。默认为 `#0E90D2`
