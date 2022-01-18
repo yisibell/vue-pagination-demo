@@ -1,25 +1,6 @@
-# @aidol/vue-pagination
-
-a pagination component for vue.js
-
-## Installation
-
-**Using npm**
-
-``` bash
-npm install @aidol/vue-pagination --save 
-# or
-cnpm install @aidol/vue-pagination --save
-```
+# vue-pagination-demo
 
 ## Usage
-
-``` js
-// In main.js
-import Vue from 'vue'
-import AiPagination from "@aidol/vue-pagination"
-Vue.use(AiPagination)
-```
 
 ``` html
 <ai-pagination :totalPages="total" @jump="jumpTo"></ai-pagination>
